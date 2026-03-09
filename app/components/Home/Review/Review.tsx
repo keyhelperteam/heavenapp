@@ -53,9 +53,9 @@ const Review = () => {
             <p className='text-sm text-gray-500'>Honoring his grandfather</p>
           </div>
           <div className='p-6 bg-white rounded-xl shadow-md border border-amber-100 mx-2'>
-            <p className='text-gray-700 italic'>A peaceful space to share my dad's favorite memories. The flowers and messages from friends mean everything.</p>
+            <p className='text-gray-700 italic'>A peaceful space to share my dad&apos;s favorite memories. The flowers and messages from friends mean everything.</p>
             <h3 className='font-bold mt-3 text-gray-900'>- Emily R.</h3>
-            <p className='text-sm text-gray-500'>Celebrating her father's life</p>
+            <p className='text-sm text-gray-500'>Celebrating her father&apos;s life</p>
           </div>
         </Carousel>
         </div>
