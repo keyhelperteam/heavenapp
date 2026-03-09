@@ -43,7 +43,7 @@ const Review = () => {
           removeArrowOnDeviceType={["tablet", "mobile"]}
         >
           <div className='p-6 bg-white rounded-xl shadow-md border border-amber-100 mx-2'>
-            <p className='text-gray-700 italic'>&quot;HeavenApp gave me a beautiful way to remember my mother. It's like visiting her whenever I need to.</p>
+            <p className='text-gray-700 italic'>&quot;HeavenApp gave me a beautiful way to remember my mother. It&apos;s like visiting her whenever I need to.</p>
             <h3 className='font-bold mt-3 text-gray-900'>- Sarah M.</h3>
             <p className='text-sm text-gray-500'>Remembering her mother</p>
           </div>
