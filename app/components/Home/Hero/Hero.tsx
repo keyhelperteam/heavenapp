@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { getImagePath } from '@/app/utils/imagePath';
 
 const Hero = () => {
   return (
@@ -24,8 +25,8 @@ const Hero = () => {
                     </p>
                     { /* play store and app store image */}
                     <div className='flex items-center space-x-4 mt-8'>
-                        <Image src='/images/google_play_app.png' alt="playstore" width={150} height={50} />
-                        <Image src='/images/apple_store_app.png' alt="appstore" width={150} height={50} />
+                        <Image src={getImagePath('/images/google_play_app.png')} alt="playstore" width={150} height={50} />
+                        <Image src={getImagePath('/images/apple_store_app.png')} alt="appstore" width={150} height={50} />
                     </div>
                     <p className='text-sm text-gray-500 mt-4'>Available on iOS and Android</p>
                 </div>
@@ -34,7 +35,7 @@ const Hero = () => {
 
                 {/* Image Content */}
                 <div className='hidden lg:block'>
-                    <Image src='/images/hero.png' alt="hero" width={700} height={700} />
+                    <Image src={getImagePath('/images/hero.png')} alt="hero" width={700} height={700} />
                 </div>
             </div>
         </div>

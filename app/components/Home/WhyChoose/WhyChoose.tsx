@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { getImagePath } from '@/app/utils/imagePath'
 
 const WhyChoose = () => {
   const benefits = [
@@ -28,7 +29,7 @@ const WhyChoose = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-[80%] mx-auto mt-10'>
             {benefits.map((benefit, index) => (
             <div key={index} className='flex flex-col items-center justify-center space-y-4 p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-amber-100'>
-                <Image src={`/images/i${index + 1}.png`} alt={`benefit-${index}`} width={70} height={70} className='rounded-lg' />
+                <Image src={getImagePath(`/images/i${index + 1}.png`)} alt={`benefit-${index}`} width={70} height={70} className='rounded-lg' />
                 <h1 className='text-lg font-bold text-gray-900'>{benefit.title}</h1>
                 <p className='text-gray-600 text-center text-sm leading-relaxed'>{benefit.description}</p>
             </div>
