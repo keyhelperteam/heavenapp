@@ -5,4 +5,39 @@
     @apply relative text-base font-medium w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-gradient-to-r after:from-amber-600 after:to-amber-500
     after:bottom-0 after:left-0 after:w-0 after:transition-all after:duration-300 hover:after:w-full;
   }
+
+  .custom-dot-list-style {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .custom-dot-list-style li {
+    margin: 0 4px;
+  }
+
+  .custom-dot-list-style li.dot {
+    background-color: #d97706;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .custom-dot-list-style li.dot.active {
+    opacity: 1;
+    transform: scale(1.2);
+    background: linear-gradient(to right, #d97706, #f97316);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.prose h3,
+.prose h4 {
+  @apply text-gray-900;
 }

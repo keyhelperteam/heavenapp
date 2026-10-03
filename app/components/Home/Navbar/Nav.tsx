@@ -47,7 +47,9 @@ const Nav = ({openNav}: Props) => {
 
             { /* Buttons */}
             <div className='lg:flex items-center space-x-5'>
-                <button className='bg-gradient-to-r from-amber-600 to-amber-700 text-white px-6 py-2.5 rounded-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 font-medium shadow-md hover:shadow-lg'>Get Started</button>
+                <Link href="#screenshots">
+                  <button className='bg-gradient-to-r from-amber-600 to-amber-700 text-white px-6 py-2.5 rounded-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 font-medium shadow-md hover:shadow-lg'>Get Started</button>
+                </Link>
             </div>
 
             { /* Hamburger Icon */}
