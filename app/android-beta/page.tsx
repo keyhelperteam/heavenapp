@@ -3,10 +3,10 @@
 import { useForm } from '@formspree/react';
 import Link from 'next/link';
 
-const FORM_KEY = process.env.NEXT_PUBLIC_FORMSPREE_FORM_KEY || '';
+const FORM_KEY = process.env.NEXT_PUBLIC_FORMSPREE_FORM_KEY;
 
-export default function AndroidBetaPage() {
-  const [state, handleSubmit] = useForm(FORM_KEY);
+function AndroidBetaForm() {
+  const [state, handleSubmit] = useForm(FORM_KEY!);
 
   if (state.succeeded) {
     return (
@@ -117,4 +117,31 @@ export default function AndroidBetaPage() {
       </div>
     </div>
   );
+}
+
+export default function AndroidBetaPage() {
+  if (!FORM_KEY) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-green-50 to-blue-50 flex items-center justify-center px-4 py-20">
+        <div className="max-w-lg w-full bg-white rounded-3xl shadow-lg p-8 md:p-12 text-center">
+          <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-800 text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+            <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
+            Beta Testing
+          </div>
+          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-1">
+            HeavenApp
+          </h1>
+          <p className="text-amber-600 font-semibold text-lg mb-4">for Android</p>
+          <p className="text-gray-500">Signups will open soon. Stay tuned!</p>
+          <div className="mt-8">
+            <Link href="/" className="text-amber-600 hover:underline text-sm font-medium">
+              &larr; Back to Home
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return <AndroidBetaForm />;
 }
